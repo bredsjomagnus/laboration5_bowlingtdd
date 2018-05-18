@@ -27,7 +27,7 @@ public class BowlingTest {
 		@Test
 		public void framescoretest() {
             Bowling bowling = new Bowling();
-            int[] frame = {2,5};
+            int[] frame = bowling.getFrame(2,5);
             int score = bowling.getFrameScore(frame);
 
             assertEquals(7, score);
