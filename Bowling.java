@@ -28,4 +28,13 @@ public class Bowling {
         return testgame;
     }
 
+    public int getGameScore(int[][] scoreboard) {
+        int total = 0;
+        for (int i = 0; i < scoreboard.length; i++) {
+            total += scoreboard[i][0];
+            total += scoreboard[i][1];
+        }
+
+        return total;
+    }
 }

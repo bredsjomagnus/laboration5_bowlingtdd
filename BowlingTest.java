@@ -38,7 +38,7 @@ public class BowlingTest {
 			Bowling bowling = new Bowling();
 
 			int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
-			int[][] testgame = bowling.setGame(gamethrows);
+			int[][] testgame = bowling.setGame(game);
 
 			assertEquals(10, testgame.length);
 		}
