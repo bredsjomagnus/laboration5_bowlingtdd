@@ -37,4 +37,25 @@ public class Bowling {
 
         return total;
     }
+
+    public int getGameWithStrike(int[][] scoreboard) {
+        int total = 0;
+        boolean strike = false;
+        for (int i = 0; i < scoreboard.length; i++) {
+            if (strike) {
+                total += scoreboard[i][0];
+                total += scoreboard[i][1];
+                strike = false;
+            }
+
+            total += scoreboard[i][0];
+            total += scoreboard[i][1];
+
+            if (scoreboard[i][0] == 10) {
+                strike = true;
+            }
+        }
+
+        return total;
+    }
 }
