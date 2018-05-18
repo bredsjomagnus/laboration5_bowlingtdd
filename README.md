@@ -33,3 +33,8 @@ first throw and four pins were knocked down in the second._
 2. **Frame Score**:An ordinary frame’s score is the sum of its throws. Requirement: Compute
 the score of an ordinary frame.
 _Examples: The score of the frame [2, 6] is 8. The score of the frame [0, 9] is 9._
+3. **Game**: A single game consists of 10 frames. Requirement: Define a game, which consists
+of 10 frames.
+_Example:  The sequence of frames [1, 5] [3, 6] [7, 2] [3, 6] [4, 4] [5, 3] [3, 3] [4, 5] [8, 1] [2,
+6] represents a game.  You will reuse this game from now on to represent different scenarios,
+modifying only a few frames each time._

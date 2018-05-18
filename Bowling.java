@@ -4,10 +4,10 @@ public class Bowling {
     */
     public static void main(String[] args) {
     // TODO Auto-generated method stub
-        System.out.print("Started");
+        System.out.println("Started");
     }
 
-	public int[] getFrame(int throwone, int throwtwo) {
+	public static int[] getFrame(int throwone, int throwtwo) {
 		int[] frame = new int[2];
 		frame[0] = throwone;
 		frame[1] = throwtwo;
@@ -18,4 +18,14 @@ public class Bowling {
 		int score = frame[0] + frame[1];
 		return score;
 	}
+
+	public int[][] setGame(int[][] th) {
+        int[][] testgame = new int[th.length][2];
+        for(int x = 0; x < th.length; x++) {
+            int[] frame = getFrame(th[x][0], th[x][1]);
+            testgame[x] = frame;
+        }
+        return testgame;
+    }
+
 }

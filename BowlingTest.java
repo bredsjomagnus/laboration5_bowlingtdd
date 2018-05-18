@@ -26,11 +26,21 @@ public class BowlingTest {
 
 		@Test
 		public void framescoretest() {
-            Bowling bowling = new Bowling();
+            Bowling bowling	= new Bowling();
             int[] frame = bowling.getFrame(2,5);
             int score = bowling.getFrameScore(frame);
 
             assertEquals(7, score);
         }
+
+		@Test
+		public void gametest() {
+			Bowling bowling = new Bowling();
+
+			int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+			int[][] testgame = bowling.setGame(gamethrows);
+
+			assertEquals(10, testgame.length);
+		}
     }
 }
