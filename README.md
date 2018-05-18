@@ -21,3 +21,12 @@ continue with step 5.
 6. Run the test-case again, to verify that the refactored implementation still succeeds the
 test-case.  If it fails, continue with step 5.  If the test-case succeeds, continue with step
 1, if there are still requirements left in the specification.
+
+### USER STORIES
+1. **Frame**: Each turn of a bowling game is called a frame. 10 pins are arranged in each frame.
+The goal of the player is to knock down as many pins as possible in each frame.  The player
+has two chances, or throws, to do so. The value of a throw is given by the number of pins
+knocked down in that throw. Requirement: Define a frame as composed of two throws.  The
+first and second throws should be distinguishable.
+Example: [2, 4] is a frame with two throws, in which two pins were knocked down in the
+first throw and four pins were knocked down in the second.
