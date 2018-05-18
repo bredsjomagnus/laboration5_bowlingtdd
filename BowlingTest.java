@@ -59,5 +59,13 @@ public class BowlingTest {
 
             assertEquals(94, bowling.getGameWithStrike(game));
         }
+
+        @Test
+        public void gameSpareScoreTest() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{1, 9}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+
+            assertEquals(88, bowling.getGameWithStrike(game));
+        }
     }
 }
