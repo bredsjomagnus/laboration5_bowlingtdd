@@ -71,7 +71,7 @@ public class Bowling {
             total += scoreboard[i][0];
             total += scoreboard[i][1];
 
-            if (scoreboard[i][0] == 10) {
+            if (scoreboard[i][0] + scoreboard[i][1] == 10) {
                 spare = true;
             }
         }
