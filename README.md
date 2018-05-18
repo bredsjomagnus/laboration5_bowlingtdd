@@ -28,5 +28,8 @@ The goal of the player is to knock down as many pins as possible in each frame. 
 has two chances, or throws, to do so. The value of a throw is given by the number of pins
 knocked down in that throw. Requirement: Define a frame as composed of two throws.  The
 first and second throws should be distinguishable.
-Example: [2, 4] is a frame with two throws, in which two pins were knocked down in the
-first throw and four pins were knocked down in the second.
+_Example: [2, 4] is a frame with two throws, in which two pins were knocked down in the
+first throw and four pins were knocked down in the second._
+2. **Frame Score**:An ordinary frame’s score is the sum of its throws. Requirement: Compute
+the score of an ordinary frame.
+_Examples: The score of the frame [2, 6] is 8. The score of the frame [0, 9] is 9._

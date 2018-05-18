@@ -20,9 +20,17 @@ public class BowlingTest {
             int throwone = 2;
 			int throwtwo = 5;
             int[] frame = bowling.getFrame(throwone, throwtwo);
-            // assertEquals(2, frame[0]);
-            // assertEquals(5, frame[1]);
+
 			assertArrayEquals(new int[]{2, 5}, frame);
+        }
+
+		@Test
+		public void framescoretest() {
+            Bowling bowling = new Bowling();
+            int[] frame = {2,5};
+            int score = bowling.getFrameScore(frame);
+
+            assertEquals(7, score);
         }
     }
 }

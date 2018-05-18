@@ -13,4 +13,9 @@ public class Bowling {
 		frame[1] = throwtwo;
 		return frame;
 	}
+
+	public int getFrameScore(int[] frame) {
+		int score = frame[0] + frame[1];
+		return score;
+	}
 }
