@@ -42,5 +42,14 @@ public class BowlingTest {
 
 			assertEquals(10, testgame.length);
 		}
+
+        @Test
+        public void gameScoreTest() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+
+
+            assertEquals(81, bowling.getGameScore(game));
+        }
     }
 }
