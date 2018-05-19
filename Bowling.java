@@ -30,57 +30,6 @@ public class Bowling {
 
     public int getGameScore(int[][] scoreboard) {
         int total = 0;
-        for (int i = 0; i < scoreboard.length; i++) {
-            total += scoreboard[i][0];
-            total += scoreboard[i][1];
-        }
-
-        return total;
-    }
-
-    public int getGameWithStrike(int[][] scoreboard) {
-        int total = 0;
-        boolean strike = false;
-        for (int i = 0; i < scoreboard.length; i++) {
-            if (strike) {
-                total += scoreboard[i][0];
-                total += scoreboard[i][1];
-                strike = false;
-            }
-
-            total += scoreboard[i][0];
-            total += scoreboard[i][1];
-
-            if (scoreboard[i][0] == 10) {
-                strike = true;
-            }
-        }
-
-        return total;
-    }
-
-    public int getGameWithSpare(int[][] scoreboard) {
-        int total = 0;
-        boolean spare = false;
-        for (int i = 0; i < scoreboard.length; i++) {
-            if (spare) {
-                total += scoreboard[i][0];
-                spare = false;
-            }
-
-            total += scoreboard[i][0];
-            total += scoreboard[i][1];
-
-            if (scoreboard[i][0] + scoreboard[i][1] == 10) {
-                spare = true;
-            }
-        }
-
-        return total;
-    }
-
-    public int getGameScoreBoth(int[][] scoreboard) {
-        int total = 0;
         boolean spare = false;
         boolean strike = false;
         for (int i = 0; i < scoreboard.length; i++) {
