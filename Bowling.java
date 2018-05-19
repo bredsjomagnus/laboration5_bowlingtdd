@@ -49,10 +49,8 @@ public class Bowling {
             if (scoreboard[i][0] == 10) {
                 strike = true;
                 if (scoreboard[i+1][0] == 10) {
-                    total += scoreboard[i][0];
-                    total += scoreboard[i][1];
                     total += scoreboard[i+2][0];
-                    strike = false;
+                    strike = true;
                 }
             } else if (scoreboard[i][0] + scoreboard[i][1] == 10) {
                 spare = true;
