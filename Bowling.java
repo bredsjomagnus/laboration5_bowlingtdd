@@ -32,7 +32,7 @@ public class Bowling {
         int total = 0;
         boolean spare = false;
         boolean strike = false;
-        for (int i = 0; i < scoreboard.length; i++) {
+        for (int i = 0; i < 10; i++) {
             if (spare) {
                 total += scoreboard[i][0];
                 spare = false;
@@ -54,6 +54,9 @@ public class Bowling {
                 }
             } else if (scoreboard[i][0] + scoreboard[i][1] == 10) {
                 spare = true;
+                if (i == 9) {
+                    total += scoreboard[i+1][0];
+                }
             }
         }
 
