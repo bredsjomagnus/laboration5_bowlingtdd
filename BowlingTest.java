@@ -75,5 +75,13 @@ public class BowlingTest {
 
             assertEquals(103, bowling.getGameScoreBoth(game));
         }
+
+        @Test
+        public void gameScoreMultipleStrikes() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{10, 0}, {10, 0}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4,5}, {8, 1}, {2, 6}};
+
+            assertEquals(112, bowling.getGameScore(game));
+		}
     }
 }
