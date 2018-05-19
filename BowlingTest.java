@@ -73,7 +73,7 @@ public class BowlingTest {
             Bowling bowling = new Bowling();
             int[][] game = {{10, 0}, {4, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
 
-            assertEquals(103, bowling.getGameScoreBoth(game));
+            assertEquals(103, bowling.getGameScore(game));
         }
 
         @Test
