@@ -83,5 +83,13 @@ public class BowlingTest {
 
             assertEquals(112, bowling.getGameScore(game));
 		}
+
+        @Test
+        public void gameScoreMultipleSpares() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{8, 2}, {5, 5}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+
+            assertEquals(98, bowling.getGameScore(game));
+        }
     }
 }
