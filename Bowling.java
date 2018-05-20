@@ -63,8 +63,8 @@ public class Bowling {
             if (this.game[i][0] == 10) {
                 strike = true;
                 if (i == 9) {
-                    total += bonus[0];
-                    total += bonus[1];
+                    total += this.bonus[0];
+                    total += this.bonus[1];
                     break;
                 }
                 if (this.game[i+1][0] == 10) {
