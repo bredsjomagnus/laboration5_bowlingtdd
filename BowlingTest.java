@@ -114,6 +114,16 @@ public class BowlingTest {
         }
 
         @Test
+        public void gameScoreBonusIsStrike() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 8}};
+            int[] bonus = {10};
+            bowling.setBonus(bonus);
+
+            assertEquals(93, bowling.getGameScore(game));
+        }
+
+        @Test
         public void gameScoreAllStrikes() {
             Bowling bowling = new Bowling();
             int[][] game = {{10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}};
