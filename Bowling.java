@@ -22,7 +22,6 @@ public class Bowling {
 	}
 
 	public boolean setGame(int[][] scoreboard) {
-        // int[][] game = new int[scoreboard.length][2];
 		boolean gameset = false;
 		for(int x = 0; x < scoreboard.length; x++) {
             int[] frame = getFrame(scoreboard[x][0], scoreboard[x][1]);
@@ -40,7 +39,7 @@ public class Bowling {
 	}
 
     public void setBonus(int[] bonusRound) {
-        bonus = bonusRound;
+        this.bonus = bonusRound;
     }
 
     public int getGameScore() {
@@ -76,14 +75,10 @@ public class Bowling {
                     }
                     strike = true;
                 }
-                if (i == 9) {
-                    total += bonus[0];
-                    //total += bonus[1];
-                }
             } else if (this.game[i][0] + this.game[i][1] == 10) {
                 spare = true;
                 if (i == 9) {
-                    total += bonus[0];
+                    total += this.bonus[0];
                 }
             }
         }
