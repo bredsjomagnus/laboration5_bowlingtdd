@@ -95,7 +95,9 @@ public class BowlingTest {
         @Test
         public void gameScoreLastSpares() {
             Bowling bowling = new Bowling();
-            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 8}, {7}};
+            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 8}};
+            int[] bonus = {7};
+            bowling.setBonus(bonus);
 
             assertEquals(90, bowling.getGameScore(game));
         }
