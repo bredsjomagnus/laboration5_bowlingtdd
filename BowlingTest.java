@@ -122,5 +122,15 @@ public class BowlingTest {
 
             assertEquals(300, bowling.getGameScore(game));
         }
+
+        @Test
+        public void gameScoreRealGame() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{6, 3}, {7, 1}, {8, 2}, {7, 2}, {10, 0}, {6, 2}, {7, 3}, {10, 0}, {8, 0}, {7, 3}};
+            int[] bonus = {10};
+            bowling.setBonus(bonus);
+
+            assertEquals(135, bowling.getGameScore(game));
+        }
     }
 }
