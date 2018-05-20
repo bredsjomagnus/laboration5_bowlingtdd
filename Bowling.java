@@ -1,4 +1,5 @@
 public class Bowling {
+    private int[] bonus;
     /**
     * @param args
     */
@@ -28,11 +29,15 @@ public class Bowling {
         return testgame;
     }
 
+    public void setBonus(int[] bonusRound) {
+        bonus = bonusRound;
+    }
+
     public int getGameScore(int[][] scoreboard) {
         int total = 0;
         boolean spare = false;
         boolean strike = false;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < scoreboard.length; i++) {
             if (spare) {
                 total += scoreboard[i][0];
                 spare = false;
@@ -55,7 +60,7 @@ public class Bowling {
             } else if (scoreboard[i][0] + scoreboard[i][1] == 10) {
                 spare = true;
                 if (i == 9) {
-                    total += scoreboard[i+1][0];
+                    total += bonus[0];
                 }
             }
         }
