@@ -101,5 +101,15 @@ public class BowlingTest {
 
             assertEquals(90, bowling.getGameScore(game));
         }
+
+        @Test
+        public void gameScoreLastStrike() {
+            Bowling bowling = new Bowling();
+            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {10, 0}};
+            int[] bonus = {7, 2};
+            bowling.setBonus(bonus);
+
+            assertEquals(92, bowling.getGameScore(game));
+        }
     }
 }
