@@ -1,42 +1,42 @@
 public class Bowling {
     private int[] bonus;
-	private int[][] game = new int[10][2];
+    private int[][] game = new int[10][2];
     /**
     * @param args
     */
     public static void main(String[] args) {
-    // TODO Auto-generated method stub
+        // TODO Auto-generated method stub
         System.out.println("Started");
     }
 
-	public static int[] getFrame(int throwone, int throwtwo) {
-		int[] frame = new int[2];
-		frame[0] = throwone;
-		frame[1] = throwtwo;
-		return frame;
-	}
+    public static int[] getFrame(int throwone, int throwtwo) {
+        int[] frame = new int[2];
+        frame[0] = throwone;
+        frame[1] = throwtwo;
+        return frame;
+    }
 
-	public int getFrameScore(int[] frame) {
-		int score = frame[0] + frame[1];
-		return score;
-	}
+    public int getFrameScore(int[] frame) {
+        int score = frame[0] + frame[1];
+        return score;
+    }
 
-	public boolean setGame(int[][] scoreboard) {
-		boolean gameset = false;
-		for(int x = 0; x < scoreboard.length; x++) {
+    public boolean setGame(int[][] scoreboard) {
+        boolean gameset = false;
+        for(int x = 0; x < scoreboard.length; x++) {
             int[] frame = getFrame(scoreboard[x][0], scoreboard[x][1]);
             game[x] = frame;
         }
-		if(game.length == 10) {
-			gameset = true;
-		}
-		return gameset;
+        if(game.length == 10) {
+            gameset = true;
+        }
+        return gameset;
     }
 
-	public int[][] getGame() {
-		System.out.println("Game length is: " + game.length);
-		return game;
-	}
+    public int[][] getGame() {
+        System.out.println("Game length is: " + game.length);
+        return game;
+    }
 
     public void setBonus(int[] bonusRound) {
         this.bonus = bonusRound;
