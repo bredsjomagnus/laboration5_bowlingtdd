@@ -1,5 +1,6 @@
 public class Bowling {
     private int[] bonus;
+	private int[][] game = new int[10][2];
     /**
     * @param args
     */
@@ -20,14 +21,23 @@ public class Bowling {
 		return score;
 	}
 
-	public int[][] setGame(int[][] th) {
-        int[][] testgame = new int[th.length][2];
-        for(int x = 0; x < th.length; x++) {
-            int[] frame = getFrame(th[x][0], th[x][1]);
-            testgame[x] = frame;
+	public boolean setGame(int[][] scoreboard) {
+        // int[][] game = new int[scoreboard.length][2];
+		boolean gameset = false;
+		for(int x = 0; x < scoreboard.length; x++) {
+            int[] frame = getFrame(scoreboard[x][0], scoreboard[x][1]);
+            game[x] = frame;
         }
-        return testgame;
+		if(game.length == 10) {
+			gameset = true;
+		}
+		return gameset;
     }
+
+	public int[][] getGame() {
+		System.out.println("Game length is: " + game.length);
+		return game;
+	}
 
     public void setBonus(int[] bonusRound) {
         bonus = bonusRound;

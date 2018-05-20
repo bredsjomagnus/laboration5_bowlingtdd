@@ -37,19 +37,20 @@ public class BowlingTest {
 		public void gametest() {
 			Bowling bowling = new Bowling();
 
-			int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
-			int[][] testgame = bowling.setGame(game);
+			int[][] scoreboard = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+			boolean gameset = bowling.setGame(scoreboard);
 
-			assertEquals(10, testgame.length);
+			assertEquals(true, gameset);
 		}
 
         @Test
         public void gameScoreTest() {
             Bowling bowling = new Bowling();
-            int[][] game = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+            int[][] scoreboard = {{1, 5}, {3, 6}, {7, 2}, {3, 6}, {4, 4}, {5, 3}, {3, 3}, {4, 5}, {8, 1}, {2, 6}};
+			bowling.setGame(scoreboard);
 
 
-            assertEquals(81, bowling.getGameScore(game));
+            assertEquals(81, bowling.getGameScore(scoreboard));
         }
 
         @Test
