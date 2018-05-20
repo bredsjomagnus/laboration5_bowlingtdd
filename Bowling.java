@@ -69,9 +69,12 @@ public class Bowling {
                     break;
                 }
                 if (scoreboard[i+1][0] == 10) {
-                    total += scoreboard[i+2][0];
+                    if (i + 2 < 10) {
+                        total += scoreboard[i+2][0];
+                    } else {
+                        total += scoreboard[i+1][0];
+                    }
                     strike = true;
-
                 }
                 if (i == 9) {
                     total += bonus[0];
