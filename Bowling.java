@@ -43,36 +43,36 @@ public class Bowling {
         bonus = bonusRound;
     }
 
-    public int getGameScore(int[][] scoreboard) {
+    public int getGameScore() {
         int total = 0;
         boolean spare = false;
         boolean strike = false;
-        for (int i = 0; i < scoreboard.length; i++) {
+        for (int i = 0; i < this.game.length; i++) {
             if (spare) {
-                total += scoreboard[i][0];
+                total += this.game[i][0];
                 spare = false;
             }
             if (strike) {
-                total += scoreboard[i][0];
-                total += scoreboard[i][1];
+                total += this.game[i][0];
+                total += this.game[i][1];
                 strike = false;
             }
 
-            total += scoreboard[i][0];
-            total += scoreboard[i][1];
+            total += this.game[i][0];
+            total += this.game[i][1];
 
-            if (scoreboard[i][0] == 10) {
+            if (this.game[i][0] == 10) {
                 strike = true;
                 if (i == 9) {
                     total += bonus[0];
                     total += bonus[1];
                     break;
                 }
-                if (scoreboard[i+1][0] == 10) {
+                if (this.game[i+1][0] == 10) {
                     if (i + 2 < 10) {
-                        total += scoreboard[i+2][0];
+                        total += this.game[i+2][0];
                     } else {
-                        total += scoreboard[i+1][0];
+                        total += this.game[i+1][0];
                     }
                     strike = true;
                 }
@@ -80,7 +80,7 @@ public class Bowling {
                     total += bonus[0];
                     //total += bonus[1];
                 }
-            } else if (scoreboard[i][0] + scoreboard[i][1] == 10) {
+            } else if (this.game[i][0] + this.game[i][1] == 10) {
                 spare = true;
                 if (i == 9) {
                     total += bonus[0];
